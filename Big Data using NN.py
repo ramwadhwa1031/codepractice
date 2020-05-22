@@ -88,25 +88,6 @@ img1_label
 # In[15]:
 
 
-import matplotlib.pyplot as plt
-
-
-# In[16]:
-
-
-plt.imshow(img1)
-
-
-# In[17]:
-
-
-plt.imshow(img1 , cmap='gray')
-
-
-# In[16]:
-
-
-img2=X_train[5]
 
 
 # In[17]:
