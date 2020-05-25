@@ -266,7 +266,7 @@ y_test_cat
 
 # In[50]:
 
-
+p=h.history['accuracy']
 h.history['accuracy'][4]
 
 
