@@ -170,55 +170,14 @@ model =Sequential()
 
 # In[30]:
 
-
-model.add(Dense(units=512, input_dim = 28*28, activation= 'relu'))
-
-
-# In[31]:
-
-
-model.summary()
-
-
-# In[32]:
-
-
-model.add(Dense(units=256, activation='relu'))
-
-
-# In[33]:
-
+i=1
+for i in range(i):
+    model.add(Dense(units=512, input_dim = 28*28, activation= 'relu'))
+    model.add(Dense(units=256, activation='relu'))
+    model.add(Dense(units=128,activation='relu'))
+    model.add(Dense(units=10, activation='softmax'))
 
 model.summary()
-
-
-# In[34]:
-
-
-model.add(Dense(units=128,activation='relu'))
-
-
-# In[35]:
-
-
-model.add(Dense(units=64,activation='relu'))
-
-
-# In[36]:
-
-
-model.summary()
-
-
-# In[37]:
-
-
-model.add(Dense(units=10, activation='softmax'))
-
-
-# In[38]:
-
-
 from keras.optimizers import RMSprop
 
 
@@ -274,13 +233,7 @@ h.history['accuracy'][4]
 
 with open('file.txt', 'w') as f:
     f.write(str(p[4]))
-if h.history['accuracy'][4] < 80:
-    print("do again")
-else:
-    print("done")
 
-
-# In[ ]:
 
 
 
