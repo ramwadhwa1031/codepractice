@@ -189,7 +189,7 @@ model.compile(optimizer= RMSprop(),loss='categorical_crossentropy', metrics=['ac
 # In[40]:
 
 
-h = model.fit(X_train, y_train_cat,epochs=5)
+h = model.fit(X_train, y_train_cat,epochs=4)
 
 
 # In[46]:
@@ -225,13 +225,13 @@ y_test_cat
 # In[50]:
 
 p=h.history['accuracy']
-h.history['accuracy'][4]
+h.history['accuracy'][3]
 
 
 # In[51]:
 
 with open('file.txt', 'w') as f:
-    f.write(str(p[4]))
+    f.write(str(p[3]))
 
 model.save('mymodel.h1')
 
