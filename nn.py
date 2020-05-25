@@ -171,7 +171,7 @@ model =Sequential()
 # In[30]:
 model.add(Dense(units=512, input_dim = 28*28, activation= 'relu'))
 model.add(Dense(units=256, activation='relu'))
-i=1
+i=0
 for i in range(i):
     model.add(Dense(units=128,activation='relu'))
     
@@ -189,7 +189,7 @@ model.compile(optimizer= RMSprop(),loss='categorical_crossentropy', metrics=['ac
 # In[40]:
 
 
-h = model.fit(X_train, y_train_cat,epochs=4)
+h = model.fit(X_train, y_train_cat,epochs=8)
 
 
 # In[46]:
@@ -225,13 +225,13 @@ y_test_cat
 # In[50]:
 
 p=h.history['accuracy']
-h.history['accuracy'][3]
+h.history['accuracy'][7]
 
 
 # In[51]:
 
 with open('file.txt', 'w') as f:
-    f.write(str(p[3]))
+    f.write(str(p[7]))
 
 model.save('mymodel.h1')
 
