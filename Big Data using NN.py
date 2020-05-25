@@ -231,7 +231,7 @@ model.compile(optimizer= RMSprop(),loss='categorical_crossentropy', metrics=['ac
 # In[40]:
 
 
-h = model.fit(X_train, y_train_cat,epochs=20)
+h = model.fit(X_train, y_train_cat,epochs=5)
 
 
 # In[46]:
@@ -267,13 +267,14 @@ y_test_cat
 # In[50]:
 
 
-h.history['accuracy'][19]
+h.history['accuracy'][4]
 
 
 # In[51]:
 
-
-if h.history['accuracy'][19] < 80:
+with open('file.txt', 'w') as f:
+    f.write(str(p))
+if h.history['accuracy'][4] < 80:
     print("do again")
 else:
     print("done")
