@@ -273,7 +273,7 @@ h.history['accuracy'][4]
 # In[51]:
 
 with open('file.txt', 'w') as f:
-    f.write(str(p))
+    f.write(str(p[4]))
 if h.history['accuracy'][4] < 80:
     print("do again")
 else:
